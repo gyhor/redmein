@@ -28,13 +28,9 @@ def load_config():
     if 'url' not in config:
         raise Exception('Please set Redmine site as "url" in {}.'.format(config_filename))
 
-    # Verify Redmine username has been set in the config file
-    if 'username' not in config:
-        raise Exception('Please set Redmine account username as "username" in {}.'.format(config_filename))
-
-    # Verify Redmine password has been set in the config file
-    if 'password' not in config:
-        raise Exception('Please set Redmine account password as "password" in {}.'.format(config_filename))
+    # Verify Redmine key has been set in the config file
+    if 'redmine_key' not in config:
+        raise Exception('Please set Redmine api key as "redmine_key" in {}.'.format(config_filename))
 
     # Verify default activity has been set in the config file
     if 'default activity' not in config:
